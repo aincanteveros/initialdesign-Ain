@@ -139,6 +139,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="user1MouseClicked"/>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="user1MouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="user1MouseExited"/>
               </Events>
@@ -173,7 +174,7 @@
         <Container class="javax.swing.JPanel" name="headcolor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="99" green="33" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -195,10 +196,10 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Container class="javax.swing.JDesktopPane" name="bodycolor">
+        <Container class="javax.swing.JDesktopPane" name="maindesktop">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>

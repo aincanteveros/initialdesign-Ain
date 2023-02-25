@@ -5,6 +5,7 @@
  */
 package initialdesign;
 import java.awt.Color;
+import internalpages.*;
 
 /**
  *
@@ -41,7 +42,7 @@ public class jinternalframe extends javax.swing.JFrame {
         user1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         headcolor = new javax.swing.JPanel();
-        bodycolor = new javax.swing.JDesktopPane();
+        maindesktop = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +90,9 @@ public class jinternalframe extends javax.swing.JFrame {
 
         user1.setBackground(new java.awt.Color(255, 255, 0));
         user1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                user1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 user1MouseEntered(evt);
             }
@@ -108,7 +112,7 @@ public class jinternalframe extends javax.swing.JFrame {
         jPanel1.add(dashcolor);
         dashcolor.setBounds(0, 0, 110, 390);
 
-        headcolor.setBackground(new java.awt.Color(204, 204, 204));
+        headcolor.setBackground(new java.awt.Color(0, 51, 153));
 
         javax.swing.GroupLayout headcolorLayout = new javax.swing.GroupLayout(headcolor);
         headcolor.setLayout(headcolorLayout);
@@ -124,21 +128,21 @@ public class jinternalframe extends javax.swing.JFrame {
         jPanel1.add(headcolor);
         headcolor.setBounds(110, 0, 550, 50);
 
-        bodycolor.setBackground(new java.awt.Color(255, 255, 255));
+        maindesktop.setBackground(new java.awt.Color(204, 204, 204));
 
-        javax.swing.GroupLayout bodycolorLayout = new javax.swing.GroupLayout(bodycolor);
-        bodycolor.setLayout(bodycolorLayout);
-        bodycolorLayout.setHorizontalGroup(
-            bodycolorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
+        maindesktop.setLayout(maindesktopLayout);
+        maindesktopLayout.setHorizontalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 550, Short.MAX_VALUE)
         );
-        bodycolorLayout.setVerticalGroup(
-            bodycolorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        maindesktopLayout.setVerticalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 340, Short.MAX_VALUE)
         );
 
-        jPanel1.add(bodycolor);
-        bodycolor.setBounds(110, 50, 550, 340);
+        jPanel1.add(maindesktop);
+        maindesktop.setBounds(110, 50, 550, 340);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,6 +182,11 @@ public class jinternalframe extends javax.swing.JFrame {
     private void user1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user1MouseExited
         user1.setBackground(dashcolors);
     }//GEN-LAST:event_user1MouseExited
+
+    private void user1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user1MouseClicked
+        userPage up = new userPage();
+        maindesktop.add(up).setVisible(true);
+    }//GEN-LAST:event_user1MouseClicked
  
     /**
      * @param args the command line arguments
@@ -215,7 +224,6 @@ public class jinternalframe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane bodycolor;
     private javax.swing.JPanel dashcolor;
     private javax.swing.JPanel dashpane;
     private javax.swing.JPanel headcolor;
@@ -223,6 +231,7 @@ public class jinternalframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel reportpane;
     private javax.swing.JPanel user1;
     // End of variables declaration//GEN-END:variables
