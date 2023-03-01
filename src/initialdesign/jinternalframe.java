@@ -6,6 +6,7 @@
 package initialdesign;
 import java.awt.Color;
 import internalpages.*;
+import internalpages.dashboardPage;
 
 /**
  *
@@ -72,6 +73,9 @@ public class jinternalframe extends javax.swing.JFrame {
 
         dashpane.setBackground(new java.awt.Color(255, 255, 0));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashpaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 dashpaneMouseEntered(evt);
             }
@@ -122,11 +126,11 @@ public class jinternalframe extends javax.swing.JFrame {
         );
         headcolorLayout.setVerticalGroup(
             headcolorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
         jPanel1.add(headcolor);
-        headcolor.setBounds(110, 0, 550, 50);
+        headcolor.setBounds(110, 0, 550, 60);
 
         maindesktop.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -138,11 +142,11 @@ public class jinternalframe extends javax.swing.JFrame {
         );
         maindesktopLayout.setVerticalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 330, Short.MAX_VALUE)
         );
 
         jPanel1.add(maindesktop);
-        maindesktop.setBounds(110, 50, 550, 340);
+        maindesktop.setBounds(110, 60, 550, 330);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,6 +191,11 @@ public class jinternalframe extends javax.swing.JFrame {
         userPage up = new userPage();
         maindesktop.add(up).setVisible(true);
     }//GEN-LAST:event_user1MouseClicked
+
+    private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
+        dashboardPage dop = new dashboardPage();
+        maindesktop.add(dop).setVisible(true);
+    }//GEN-LAST:event_dashpaneMouseClicked
  
     /**
      * @param args the command line arguments

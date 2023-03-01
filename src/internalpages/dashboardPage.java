@@ -5,6 +5,8 @@
  */
 package internalpages;
 
+import java.awt.Color;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
 /**
  *
  * @author SCC-PC04
@@ -16,6 +18,14 @@ public class dashboardPage extends javax.swing.JInternalFrame {
      */
     public dashboardPage() {
         initComponents();
+        
+        Color dashcolors = new Color(255,255,0);
+        Color headcolors = new Color(204,204,204);
+        Color bodycolors = new Color(255,255,255); 
+        
+       this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
+        bi.setNorthPane(null);
     }
 
     /**
@@ -28,40 +38,109 @@ public class dashboardPage extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        settings = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        reports = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        manageuser = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 534, 220));
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 153));
-        jPanel2.setLayout(null);
+        jPanel4.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel4.setLayout(null);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 0));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel2.add(jPanel3);
-        jPanel3.setBounds(380, 0, 120, 110);
+        jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("SETTINGS");
+        jPanel4.add(jLabel2);
+        jLabel2.setBounds(0, 80, 110, 16);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        settings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        settings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpages/icons8-services-60.png"))); // NOI18N
+        jPanel4.add(settings);
+        settings.setBounds(0, 0, 110, 100);
+
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(380, 170, 110, 100);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel6.setLayout(null);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("REPORTS");
+        jPanel6.add(jLabel7);
+        jLabel7.setBounds(0, 80, 110, 16);
+
+        reports.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        reports.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpages/icons8-graph-report-60.png"))); // NOI18N
+        jPanel6.add(reports);
+        reports.setBounds(0, 0, 110, 100);
+
+        jPanel1.add(jPanel6);
+        jPanel6.setBounds(220, 170, 110, 100);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel5.setLayout(null);
+
+        manageuser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        manageuser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpages/icons8-manager-66 (1).png"))); // NOI18N
+        manageuser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manageuserMouseEntered(evt);
+            }
+        });
+        jPanel5.add(manageuser);
+        manageuser.setBounds(0, 0, 110, 100);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        jLabel3.setText("MANAGE USER");
+        jPanel5.add(jLabel3);
+        jLabel3.setBounds(10, 80, 100, 16);
+
+        jPanel1.add(jPanel5);
+        jPanel5.setBounds(50, 170, 110, 100);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabel1.setText("AIRLINE RESERVATION SYSTEM");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(20, 20, 280, 30);
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(110, 20, 370, 30);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 534, 110));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpages/rsz_1rsz_2sad-removebg-preview.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(10, 0, 100, 110);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void manageuserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageuserMouseEntered
+        
+    }//GEN-LAST:event_manageuserMouseEntered
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel manageuser;
+    private javax.swing.JLabel reports;
+    private javax.swing.JLabel settings;
     // End of variables declaration//GEN-END:variables
 }
